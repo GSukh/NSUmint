@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="FontAwesome.otf">
+            <string>FontAwesome</string>
+            <string>FontAwesome</string>
+            <string>FontAwesome</string>
+            <string>FontAwesome</string>
+            <string>FontAwesome</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController">
+            <connections>
+                <outlet property="facultyButton" destination="F8a-C9-Le1" id="Apm-BT-lb1"/>
+                <outlet property="facultyLabel" destination="DYg-Ru-aeR" id="uYr-v4-IcF"/>
+                <outlet property="femaleButton" destination="2sW-tI-SRZ" id="21j-0p-bD8"/>
+                <outlet property="genderLabel" destination="PEL-m5-DQh" id="vUY-Ym-NDM"/>
+                <outlet property="maleButton" destination="lue-mt-hKj" id="mO9-YK-824"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" misplaced="YES" text="Выберите свой пол" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEL-m5-DQh">
+                    <rect key="frame" x="125" y="27" width="127" height="14"/>
+                    <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yiq-kL-V8v">
+                    <rect key="frame" x="0.0" y="51" width="185" height="20"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sW-tI-SRZ">
+                            <rect key="frame" x="110" y="0.0" width="75" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="75" id="VrC-C7-N5Y"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="8"/>
+                            <state key="normal" title="ДЕВУШКА">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="femaleAction" destination="-1" eventType="touchUpInside" id="ZUK-ng-eVX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="2sW-tI-SRZ" firstAttribute="top" secondItem="yiq-kL-V8v" secondAttribute="top" id="INO-If-Dpy"/>
+                        <constraint firstAttribute="bottom" secondItem="2sW-tI-SRZ" secondAttribute="bottom" id="Yqj-AB-B0e"/>
+                        <constraint firstAttribute="height" constant="20" id="gLc-Bt-l28"/>
+                        <constraint firstAttribute="trailing" secondItem="2sW-tI-SRZ" secondAttribute="trailing" id="lYg-js-0NE"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faY-ro-lMO">
+                    <rect key="frame" x="190" y="51" width="185" height="20"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lue-mt-hKj">
+                            <rect key="frame" x="0.0" y="0.0" width="75" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="75" id="CxO-nl-Q9l"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="8"/>
+                            <state key="normal" title="ПАРЕНЬ">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="maleAction" destination="-1" eventType="touchUpInside" id="2JL-wS-JSb"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="lue-mt-hKj" secondAttribute="bottom" id="1OP-KH-nH9"/>
+                        <constraint firstItem="lue-mt-hKj" firstAttribute="leading" secondItem="faY-ro-lMO" secondAttribute="leading" id="C2C-pq-jnP"/>
+                        <constraint firstAttribute="height" constant="20" id="UGp-uN-aSC"/>
+                        <constraint firstItem="lue-mt-hKj" firstAttribute="top" secondItem="faY-ro-lMO" secondAttribute="top" id="yFH-5L-t6K"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" misplaced="YES" text="Выберите свой факультет" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYg-Ru-aeR">
+                    <rect key="frame" x="101" y="98" width="175" height="14"/>
+                    <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8a-C9-Le1">
+                    <rect key="frame" x="117" y="122" width="140" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="AYe-al-twa"/>
+                        <constraint firstAttribute="width" constant="140" id="QSx-Po-gFu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="8"/>
+                    <state key="normal" title="Не выбран">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="facultyAction" destination="-1" eventType="touchUpInside" id="eU5-EO-0Q9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="DYg-Ru-aeR" firstAttribute="top" secondItem="faY-ro-lMO" secondAttribute="bottom" constant="27" id="3uO-AU-J3n"/>
+                <constraint firstAttribute="trailing" secondItem="faY-ro-lMO" secondAttribute="trailing" id="5z6-RW-VFX"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PEL-m5-DQh" secondAttribute="trailing" constant="30" id="AhM-9Z-jz5"/>
+                <constraint firstItem="F8a-C9-Le1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="EWy-kr-AbR"/>
+                <constraint firstItem="faY-ro-lMO" firstAttribute="leading" secondItem="yiq-kL-V8v" secondAttribute="trailing" constant="5" id="EXf-Qe-rcl"/>
+                <constraint firstItem="PEL-m5-DQh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="IHs-Av-5bY"/>
+                <constraint firstItem="yiq-kL-V8v" firstAttribute="width" secondItem="faY-ro-lMO" secondAttribute="width" id="IdO-uU-hi1"/>
+                <constraint firstItem="PEL-m5-DQh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="LB3-6r-LLW"/>
+                <constraint firstItem="F8a-C9-Le1" firstAttribute="top" secondItem="DYg-Ru-aeR" secondAttribute="bottom" constant="10" id="QRW-PL-0pS"/>
+                <constraint firstItem="yiq-kL-V8v" firstAttribute="top" secondItem="PEL-m5-DQh" secondAttribute="bottom" constant="10" id="Vmp-3A-n4q"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DYg-Ru-aeR" secondAttribute="trailing" constant="30" id="Xkd-Jh-qdq"/>
+                <constraint firstItem="DYg-Ru-aeR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bEG-BK-zpj"/>
+                <constraint firstItem="faY-ro-lMO" firstAttribute="top" secondItem="PEL-m5-DQh" secondAttribute="bottom" constant="10" id="bLd-H4-MFE"/>
+                <constraint firstItem="yiq-kL-V8v" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="btP-cy-V1m"/>
+                <constraint firstItem="DYg-Ru-aeR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="pcd-Lt-lOo"/>
+                <constraint firstItem="PEL-m5-DQh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="27" id="vVU-ce-OPO"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="998.5" y="375.5"/>
+        </view>
+    </objects>
+</document>
